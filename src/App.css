@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap');
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./img/traingle.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left-container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  color: #FFDD02;
+
+}
+.header{
+  margin-top: 3rem;
+  font-size:2.5rem;
+  font-weight: 500;
+}
+.nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+}
+.nav button{
+  
+  padding:0.7rem;
+  margin: 1.5rem;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size:1rem;
+  color: #FFDD02;
+  border: none;
+  background-color:#134765;
+  
+}
+.nav button:hover{
+  background-color: #091e2b;
+  cursor: pointer;
+}
+.nav span{
+    
+  color: #00D596;
+
+}
+
