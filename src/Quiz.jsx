@@ -6,13 +6,20 @@ function Quiz() {
     var userAns = []
     
     var [score, setscore] = useState(0)
+    const[msg,setmsg]=useState("")
+    
     
     function check() {
-        userAns.forEach(element => {
-           if(myAns.includes(element)){
-               setscore(score=score+1)
-           }
-        });
+        if(userAns.length < 2 ){
+            setmsg("Answers all the question")
+        }else{
+          setmsg("")
+            userAns.forEach(element => {
+               if(myAns.includes(element)){
+                   setscore(score=score+1)
+               }
+            });
+        }
     }
     
     return (
@@ -40,6 +47,7 @@ function Quiz() {
                 </div>
             </div>
             <button onClick={check}>Submit</button>
+            <span className="response">{msg}</span>
             <span className="response">your score is : {score} </span>
 
         </div>

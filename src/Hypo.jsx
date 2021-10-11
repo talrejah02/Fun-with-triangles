@@ -7,10 +7,18 @@ function Hypo() {
     })
     const[msg,setmsg]=useState("")
     function check(){
+        if(sides.side_one  === "" || sides.side_two  === ""){
+            setmsg("values can't be empty'")
+       }else{
+            if(sides.side_one  <= 0 || sides.side_two  <= 0 ){
+              setmsg("Values can't be negative or less than 1")
+            }else{
        var sum= Math.pow(sides.side_one,2)+ Math.pow( sides.side_two,2)
         var length=Math.sqrt(sum)
         console.log(length)
         setmsg("your hypotenuse is : " + length.toFixed(2))
+            }
+        }
     }
     return (
         <div className="right-container">
